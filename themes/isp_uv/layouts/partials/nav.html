@@ -11,7 +11,7 @@
           {{ if .HasChildren }}
             <li class="nav-item dropdown px-2 nav-item-highlight">
               <a class="nav-link dropdown-toggle a" href="{{ .URL }}" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+                aria-expanded="false" data-has-children="true">
                 {{ .Name }}
               </a>
               <ul class="dropdown-menu">
@@ -33,7 +33,7 @@
 
 <style>
   .navbar {
-    --bs-navbar-padding-y: 0rem !important; 
+    --bs-navbar-padding-y: 0rem !important;
     background-color: #222 !important;
   }
 
@@ -54,7 +54,7 @@
   }
 
   .dropdown-menu {
-    margin-top: 7px; 
+    margin-top: 7px;
   }
 
   .navbar-toggler-icon {
@@ -103,37 +103,48 @@
 </style>
 
 <script>
-  document.querySelectorAll('.dropdown-toggle').forEach(item => {
-    item.removeAttribute('data-bs-toggle');
-  });
-
-  window.onload = function() {
-    // Detectar la escala de la pantalla
-    const scale = window.devicePixelRatio;
-
-    // Obtener la barra de navegación
-    const navbar = document.querySelector('.navbar-collapse');
-
-    // Si la escala es mayor o igual a 1.25, agregar la clase para mostrar el menú desplegable
-    if (scale >= 1.25) {
-      navbar.classList.add('show');
-    }
-
+  document.addEventListener('DOMContentLoaded', function () {
     // Resaltar el enlace activo basado en la URL actual
     const currentPath = window.location.pathname;
     const menuItems = document.querySelectorAll('.navbar-nav .nav-link');
-    menuItems.forEach(function(item) {
+    menuItems.forEach(function (item) {
       if (item.getAttribute('href') === currentPath) {
         item.classList.add('active');
       }
     });
 
     const dropdownItems = document.querySelectorAll('.navbar-nav .dropdown-item');
-    dropdownItems.forEach(function(item) {
+    dropdownItems.forEach(function (item) {
       if (item.getAttribute('href') === currentPath) {
         item.classList.add('active');
         item.closest('.dropdown').querySelector('.dropdown-toggle').classList.add('active');
       }
     });
-  };
+
+    // Manejar el clic en enlaces con menús desplegables
+    document.querySelectorAll('.dropdown-toggle[data-has-children="true"]').forEach(item => {
+      item.addEventListener('click', function (e) {
+        if (window.innerWidth < 992) {
+          // Prevenir el comportamiento predeterminado en dispositivos móviles
+          e.preventDefault();
+        } else {
+          // Permitir la navegación en pantallas grandes
+          window.location.href = this.getAttribute('href');
+        }
+      });
+    });
+
+    // Cerrar el menú desplegable al hacer clic en un enlace en dispositivos móviles
+    document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item').forEach(item => {
+      item.addEventListener('click', () => {
+        if (window.innerWidth < 992) {
+          const navbarToggler = document.querySelector('.navbar-toggler');
+          const navbarCollapse = document.querySelector('.navbar-collapse');
+          if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+          }
+        }
+      });
+    });
+  });
 </script>

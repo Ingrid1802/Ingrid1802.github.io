@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="container">
+    <h1><span class="label label-info">{{ .Title }}</span></h1>
+    {{ range .Pages }}
+    <div class="row collaborator mb-4">
+        <div class="col-md-12">
+            {{ .Content | safeHTML }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

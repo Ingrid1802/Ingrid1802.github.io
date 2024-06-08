@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+
+{{ .Content }}
+
+<div class="content-container">
+	{{ $pages := sort .Pages "Params.weight" }}
+	{{ range .Pages.GroupByParam "active" }} 
+		{{ if .Key}}
+		<h1> Current projects </h1>
+		{{ else }}
+		<h1> Past projects </h1>
+		{{ end }}
+
+		{{ partial "projects.html" .Pages }}  
+
+	{{ end }} 
+
+</div>
+
+
+
+{{ end }}

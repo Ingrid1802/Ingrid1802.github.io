@@ -311,7 +311,7 @@ body {
   
   
   
-  /css para los botones de filtrado de la seccion de publications/
+  /*css para los botones de filtrado de la seccion de publications*/
   
   .btn-projects {
     background-color: #ececec;
@@ -515,3 +515,38 @@ body.section-contact .navbar-nav .nav-link[href="/contact/"] {
   color: #fff !important;
   background-color: #007bff !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

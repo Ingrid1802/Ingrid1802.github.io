@@ -9,18 +9,25 @@
 <div class="content-container">
     {{ $groups := .Pages.GroupByParam "role" }}
     {{ $order := slice "full professors" "associate professors" "assistant professors" "senior research scientists" "postdocs" "phd students" "visitors" "alumni"}}
-    {{ range $order }}
+    {{ range $order  }}
     {{ with index (where $groups "Key" .) 0 }}
     <h1><span class="label label-info">{{ .Key | title }}</span></h1>
     <div class="card container" style="margin-left:3%;">
         {{ range .Pages }}
         {{ $img := urls.JoinPath "images/people" .Params.img }}
         {{ $name := .Title }}
+        {{ $link_image := .Params.link_image }}
         <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-3">
+                    {{ if $link_image }}
+                    <a href="{{ $link_image }}">
+                    {{ end }}
                     {{ with resources.Get $img }}
                     <img src="{{ .RelPermalink }}" width="100px" height="100px" class="img-fluid" alt="Image of {{ $name }}">
+                    {{ end }}
+                    {{ if $link_image }}
+                    </a>
                     {{ end }}
                 </div>
                 <div class="col-md-9">

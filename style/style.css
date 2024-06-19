@@ -135,11 +135,11 @@ body {
 
   .card-text {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 45.59px;
+    height: calc(3 * 1.5em); /* Ajusta la altura basada en el tamaño de la fuente y el line-height */
   }
 }
 

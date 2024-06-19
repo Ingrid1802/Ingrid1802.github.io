@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div class="container-fluid">
-    <a href="/" class="d-lg-none">
-      <img src="/images/isp_logo_sinfondo.webp" alt="ISP Icon" height="30">
+    <a href="/" class="d-lg-none d-flex align-items-center a_logonav">
+      <img src="/images/isp_logo_sinfondo.webp" alt="ISP Icon" height="30" class="logo_nav">
+      <span class="ms-2 text-isp">ISP</span>
     </a>
     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
@@ -41,8 +42,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <style>
-  .navbar {
+.navbar {
   --bs-navbar-padding-y: 0rem !important;
   background-color: #222 !important;
 }
@@ -167,9 +179,27 @@
   }
 
   .d-flex {
-    height: 40px;
+    height: 45px;
   }
+
+  .a_logonav{
+    text-decoration: none !important;
+  }
+
+  .text-isp {
+    font-size: 1.3rem;
+    color: #9d9d9d;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none !important;
+  }
+
+  .navbar-nav {
+        max-height: calc(50vh - 56px);
+        overflow-y: auto;
+    }
 }
+
 
 </style>
 

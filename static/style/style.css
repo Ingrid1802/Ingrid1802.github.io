@@ -374,6 +374,28 @@ h3 {
 
 
 
+  /* Estilos para el mapa en pantallas pequeñas */
+  @media (max-width: 767.98px) {
+    #map-container {
+      height: 250px;
+    }
+  }
+
+  /* Estilos para el mapa en tabletas */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    #map-container {
+      height: 350px;
+    }
+  }
+
+  /* Estilos para el mapa en pantallas grandes */
+  @media (min-width: 992px) {
+    #map-container {
+      height: 450px;
+    }
+  }
+
+
 
 
 

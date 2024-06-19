@@ -27,27 +27,27 @@
     <tbody>
       {{ $currentYear := "" }}
       {{ range .Site.RegularPages }}
-        {{ if eq .Section "seminars" }}
-          {{ $year := .Date.Format "2006" }}
-          {{ if ne $currentYear $year }}
-            {{ if ne $currentYear "" }}
-              </tbody>
-            {{ end }}
-            <tr>
-              <td colspan="4" style="background-color: #d9edf7; text-align: center;">
-                <strong>{{ $year }}</strong>
-              </td>
-            </tr>
-            <tbody>
-            {{ $currentYear = $year }}
-          {{ end }}
-          <tr>
-            <td>{{ .Date.Format "2006-01-02" }}</td>
-            <td>{{ .Title | safeHTML }}</td>
-            <td>{{ .Params.speaker }}</td>
-            <td>{{ .Params.affiliation }}</td>
-          </tr>
-        {{ end }}
+      {{ if eq .Section "seminars" }}
+      {{ $year := .Date.Format "2006" }}
+      {{ if ne $currentYear $year }}
+      {{ if ne $currentYear "" }}
+    </tbody>
+    {{ end }}
+    <tr>
+      <td colspan="4" style="background-color: #d9edf7; text-align: center;">
+        <strong>{{ $year }}</strong>
+      </td>
+    </tr>
+    <tbody>
+      {{ $currentYear = $year }}
+      {{ end }}
+      <tr>
+        <td>{{ .Date.Format "2006-01-02" }}</td>
+        <td>{{ .Title | safeHTML }}</td>
+        <td>{{ .Params.speaker }}</td>
+        <td>{{ .Params.affiliation }}</td>
+      </tr>
+      {{ end }}
       {{ end }}
     </tbody>
   </table>

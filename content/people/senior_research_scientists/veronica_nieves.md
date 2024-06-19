@@ -1,6 +1,7 @@
 ---
 date: '2024-05-10T05:29:29+02:00'
 draft: false
+weight: 1
 title: 'Veronica Nieves - Distinguished Researcher'
 role: "senior research scientists"
 params:
@@ -13,4 +14,4 @@ params:
   website: 'https://www.aiforoceans.org'
 ---
 
-My research at the interface between ocean sciences and climate informatics focuses on the development of the next generation of advanced algorithms to better understand our changing oceans and evaluate potential future climate risks. Research activities can be followed on [I4OCEANS](https://www.aiforoceans.org).
+My research at the interface of ocean sciences and climate informatics focuses on developing advanced algorithms to understand changing oceans and evaluate future climate risks. Follow my research activities on AI4OCEANS.

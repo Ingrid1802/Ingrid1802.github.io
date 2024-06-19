@@ -345,32 +345,6 @@ h3 {
 
 
 
-/*SEMINARS*/
-
-.image-container {
-  display: flex;
-  flex-direction: row; /* Por defecto, las columnas están en fila */
-}
-
-@media (max-width: 767px) {
-  .course-container {
-    flex-direction: column; /* En dispositivos pequeños, cambia a columna */
-    align-items: center; /* Centra los elementos */
-    width: 420px;
-  }
-
-  .image-container {
-    margin-bottom: 20px; /* Añade espacio debajo de la imagen */
-  }
-
-  .course-containertext-container {
-    padding-left: 0; /* Elimina el padding izquierdo */
-    text-align: center; /* Centra el texto */
-  }
-}
-
-
-
 
 
 

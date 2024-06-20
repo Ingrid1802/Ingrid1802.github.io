@@ -1,7 +1,6 @@
 ---
 date: '2024-05-10T05:29:29+02:00'
 draft: false
-weight: 7
 title: 'Roberto Fernandez-Moran'
 role: assistant professors
 params:

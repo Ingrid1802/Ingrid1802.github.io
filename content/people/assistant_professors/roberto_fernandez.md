@@ -1,8 +1,9 @@
 ---
 date: '2024-05-10T05:29:29+02:00'
 draft: false
+weight: 7
 title: 'Roberto Fernandez-Moran'
-role: assistant_professors
+role: assistant professors
 params:
   img: roberto.webp
   scholar: 'https://scholar.google.com/citations?user=q9Bp1ekAAAAJ&hl=es&oi=ao'

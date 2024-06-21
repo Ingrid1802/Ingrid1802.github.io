@@ -1,7 +1,7 @@
 ---
 title: "CloudSEN12"
 img: "logo.gif"
-link: "/isp/data/data_links/cloudsen12/"
+link: "https://cloudsen12.github.io/"
 description: "A Benchmark Dataset for Cloud Semantic Understanding"
 weight: 2
 ---

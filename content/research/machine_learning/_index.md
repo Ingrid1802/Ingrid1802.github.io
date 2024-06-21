@@ -14,8 +14,8 @@ title: "Research Machine Learning"
 
 **The main research hypothesis of our research agenda is that current AI models are limited to tackle fitting problems only, and do not have a clear notion of space, time and causal relations.** We need to aboard the more ambitious questions of understanding through machine learning, going beyond mere model fitting. This goal needs to develop (i) targeted ML that respects data characteristics, (ii) hybrid physics-aware ML that incorporates domain knowledge and inductive priors, and more importantly (3) moving from fitting to understanding through AI models that are explainable and grasp causal relations from observational data.
 
-<div class="image_ml">
-<img src="img/philosophy_balls.webp" style="width:500px; display: block; margin: auto" class="image_ml"></img>
+<div class="image_ml_c">
+<img src="img/philosophy_balls.webp" style=" display: block; margin: auto" class="image_ml"></img>
 </div>
 <br>
 
@@ -45,12 +45,22 @@ Modeling input data, however, does not ensure that the model will adapt to chang
 
 
 <style>
+  .image_ml{
+    width:800px;
+  }
+
 @media (max-width: 767px) {
-  .image_ml {
+  .image_ml_c {
     max-width: 100%;
     height: auto;
     overflow-x: auto;
   }
+
+  .image_ml{
+    width:500px;
+  }
+
+
 }
 
 </style>

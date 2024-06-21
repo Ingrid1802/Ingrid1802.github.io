@@ -13,8 +13,8 @@ title: "Research Social Science"
 
 **The Earth is a highly complex, dynamic, and networked system where very different physical, chemical and biological processes interact, to form the world we know. The description of such a complex system needs of the integration of different disciplines such as Physics, Chemistry, Mathematics and other applied sciences, leading to what has been coined as Earth System Science (ESS). The analysis of the Earth system involves studying interacting processes occurring in several spheres (atmosphere, hydrosphere, cryosphere, geosphere, pedosphere, biosphere, and magnetosphere) as well as the anthroposphere where the Society acts.**
 
-<div class="image_s">
-<img src="img/SDGs.webp"  style="width:500px; display: block; margin: auto" class="image_s"></img>
+<div class="cimage_s">
+<img src="img/SDGs.webp"  style="display: block; margin: auto" class="image_s"></img>
 </div>
 <br>
 
@@ -39,10 +39,16 @@ Our main goal is to develop new machine learning models for the efficient treatm
 
 
 <style>
+  .image_s{
+    width:800px;
+  }
 @media (max-width: 767px) {
-  .image_s {
+  .cimage_s {
     height: auto;
     overflow-x: auto;
+  }
+  .image_s{
+    width:500px;
   }
 }
 
